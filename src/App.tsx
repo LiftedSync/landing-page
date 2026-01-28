@@ -1,4 +1,4 @@
-import { Github, Monitor, Users, Play } from "lucide-react";
+import { Github, Monitor, Users, Play, Download } from "lucide-react";
 
 function App() {
   return (
@@ -17,21 +17,38 @@ function App() {
             <br />
             Watch together with friends, no matter the distance.
           </p>
-          <a
-            href="https://github.com/orgs/LiftedSync/repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.ctaButton}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#e0e0e0")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#fafafa")
-            }
-          >
-            <Github size={18} />
-            View on GitHub
-          </a>
+          <div style={styles.ctaGroup}>
+            <a
+              href="https://github.com/orgs/LiftedSync/repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.ctaButton}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "#e0e0e0")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "#fafafa")
+              }
+            >
+              <Github size={18} />
+              View on GitHub
+            </a>
+            <a
+              href="https://drive.google.com/file/d/15pZmqT9yj78ROY9GCblyXOood0mWF0en/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.ctaButton}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "#e0e0e0")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "#fafafa")
+              }
+            >
+              <Download size={18} />
+              Download
+            </a>
+          </div>
           <p style={styles.hobbyNote}>
             A hobby project — to watch content together in sync with friends.
           </p>
@@ -122,6 +139,12 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.6,
     color: "#a3a3a3",
     marginBottom: 36,
+  },
+  ctaGroup: {
+    display: "flex",
+    gap: 12,
+    flexWrap: "wrap" as const,
+    justifyContent: "center",
   },
   ctaButton: {
     display: "inline-flex",
