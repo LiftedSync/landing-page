@@ -18,7 +18,12 @@ export default function PrivacyPage() {
           </p>
         </Section>
 
-        <Section title="2. Data We Collect">
+        <Section title="2. Data Handled">
+          <p className="mb-4">
+            We process the following data solely to facilitate real-time
+            synchronization. This data is <strong>transient</strong> and is not
+            permanently stored on our servers.
+          </p>
           <ul className="list-disc space-y-1 pl-5">
             <li>
               <strong className="text-foreground">Username</strong> — a
@@ -33,6 +38,12 @@ export default function PrivacyPage() {
             <li>
               <strong className="text-foreground">Room participation</strong> —
               which room code you have joined.
+            </li>
+            <li>
+              <strong className="text-foreground">Navigate to page URL</strong> — When using the
+              <i> Navigate Together</i> feature, this address is shared with other room participants
+              to enable synchronized viewing. To ensure navigation safety, the URL is validated
+              against the platform's supported domains and is never stored on our servers.
             </li>
           </ul>
         </Section>
