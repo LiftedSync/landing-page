@@ -12,13 +12,6 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center gap-2.5 no-underline">
-          <img src="/lifted.png" alt="LiftedSync logo" className="h-8 w-8" />
-          <span className="text-lg font-semibold text-foreground">
-            Lifted
-          </span>
-        </Link>
-
         <div className="flex items-center gap-6">
           {navLinks.map(({ to, label }) => (
             <Link
